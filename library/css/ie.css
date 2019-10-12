@@ -220,6 +220,17 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
+nav {
+  background: transparent;
+  margin-top: -50px;
+  height: 50px; }
+
+.sticky_nav {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  background-color: #DA380C; }
+
 .nav {
   border: 0;
   /* end .menu ul li */
@@ -244,7 +255,7 @@ NAVIGATION STYLES
         text-decoration: underline; }
     .nav li ul.sub-menu,
     .nav li ul.children {
-      margin-top: 0;
+      margin-top: -5px;
       border: 1px solid #ccc;
       border-top: 0;
       position: absolute;
@@ -277,6 +288,11 @@ NAVIGATION STYLES
       visibility: visible; }
 
 /* end .nav */
+.footer-nav li ul.sub-menu,
+.footer-nav li ul.children {
+  visibility: visible;
+  position: relative; }
+
 /*********************
 SIDEBARS & ASIDES
 *********************/

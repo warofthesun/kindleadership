@@ -343,7 +343,7 @@ BOX SIZING
   /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
   width: 731px;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
@@ -566,11 +566,11 @@ probably best not to use it. I mean, were you going to anyway? */
     -webkit-hyphenate-after: 3;
     hyphenate-lines: 3; }
   body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
-    color: #2980b9;
+    color: #DA380C;
     /* on hover */
     /* on click */ }
     body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
-      color: #216693; }
+      color: #ae2d0a; }
     body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
   body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {
@@ -625,7 +625,7 @@ probably best not to use it. I mean, were you going to anyway? */
   body#tinymce.wp-editor blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #333;
+    border-left: 3px solid #DA380C;
     font-style: italic;
     color: #9fa6b4; }
   body#tinymce.wp-editor dd {

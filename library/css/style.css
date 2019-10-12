@@ -1357,7 +1357,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 .accent-btn, .comment-reply-link, #submit {
   display: inline-block;
   position: relative;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
   font-size: 0.9em;
@@ -1383,11 +1383,11 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 .accent-btn, .comment-reply-link, #submit {
-  background-color: #333; }
+  background-color: #DA380C; }
   .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus {
-    background-color: #292929; }
+    background-color: #c7330b; }
   .accent-btn:active, .comment-reply-link:active, #submit:active {
-    background-color: #262626; }
+    background-color: #c2320b; }
 
 /******************************************************************
 Site Name:
@@ -1440,7 +1440,7 @@ textarea,
   border: 0;
   width: 100%;
   max-width: 400px;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f7f8fa;
   -webkit-transition: background-color 0.24s ease-in-out;
   transition: background-color 0.24s ease-in-out; }
@@ -1686,11 +1686,11 @@ BASE (MOBILE) SIZE
 GENERAL STYLES
 *********************/
 body {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
-  background-color: #eaedf2;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1702,6 +1702,14 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+
+#inner-header {
+  height: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 #inner-footer .nav {
   opacity: 1;
@@ -1765,12 +1773,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #2980b9;
+  color: #DA380C;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #216693; }
+    color: #ae2d0a; }
   a:link, a:visited:link {
     /*
 		this highlights links on iPhones/iPads.
@@ -1785,6 +1793,7 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
+  font-family: "Anton", "Georgia", Cambria, Times New Roman, Times, serif;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1819,10 +1828,23 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #000; }
+  background-color: #000;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 #logo {
-  margin: 0.75em 0; }
+  margin: 0.75em 0;
+  letter-spacing: .02em;
+  text-align: center; }
   #logo a {
     color: #fff; }
 
@@ -1837,16 +1859,40 @@ the navs on the site so our css is cleaner
 and more scalable.
 
 */
+nav {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #DA380C; }
+
+.sticky_nav {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  background-color: #DA380C; }
+
 #mobile-nav {
   text-align: center;
-  margin-bottom: 1em;
-  margin-top: -2em;
   -webkit-transition: all .5s;
-  transition: all .5s; }
+  transition: all .5s;
+  height: 50px; }
+  #mobile-nav.mobile_sticky {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: #DA380C; }
   #mobile-nav.show {
     margin-top: 0em;
     padding: .5em;
     background-color: white; }
+    #mobile-nav.show.mobile_sticky {
+      position: relative; }
     #mobile-nav.show .fa-chevron-down {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
@@ -1869,6 +1915,10 @@ and more scalable.
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
+  .nav.footer-nav {
+    display: block; }
+    .nav.footer-nav li {
+      text-align: left; }
   .nav.show {
     opacity: 1;
     display: -webkit-box;
@@ -1908,8 +1958,7 @@ article .hero--image img {
 .hentry {
   background-color: #fff;
   border-radius: 3px;
-  margin-bottom: 1.5em;
-  border: 1px solid #ccc; }
+  margin-bottom: 1.5em; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
@@ -1979,7 +2028,7 @@ article .hero--image img {
   .entry-content blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #333;
+    border-left: 3px solid #DA380C;
     font-style: italic;
     color: #9fa6b4; }
   .entry-content dd {
@@ -2094,9 +2143,9 @@ PAGE NAVI STYLES
     padding: 0.75em;
     min-width: 1em;
     display: block;
-    color: #333; }
+    color: #DA380C; }
     .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-      background-color: #333;
+      background-color: #DA380C;
       color: #fff; }
   .pagination .current {
     cursor: default;
@@ -2362,6 +2411,15 @@ HEADER STYLES
   /*********************
 NAVIGATION STYLES
 *********************/
+  nav {
+    background: transparent;
+    margin-top: -50px;
+    height: 50px; }
+  .sticky_nav {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    background-color: #DA380C; }
   .nav {
     border: 0;
     /* end .menu ul li */
@@ -2386,7 +2444,7 @@ NAVIGATION STYLES
           text-decoration: underline; }
       .nav li ul.sub-menu,
       .nav li ul.children {
-        margin-top: 0;
+        margin-top: -5px;
         border: 1px solid #ccc;
         border-top: 0;
         position: absolute;
@@ -2418,6 +2476,10 @@ NAVIGATION STYLES
         top: auto;
         visibility: visible; }
   /* end .nav */
+  .footer-nav li ul.sub-menu,
+  .footer-nav li ul.children {
+    visibility: visible;
+    position: relative; }
   /*********************
 SIDEBARS & ASIDES
 *********************/

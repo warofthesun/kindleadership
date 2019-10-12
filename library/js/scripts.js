@@ -1,15 +1,9 @@
 /*
- * Bones Scripts File
- * Author: Eddie Machado
- *
+
  * This file should contain any js scripts you want to add to the site.
  * Instead of calling it in the header or throwing it inside wp_head()
  * this file will be called automatically in the footer so as not to
  * slow the page load.
- *
- * There are a lot of example functions and tools in here. If you don't
- * need any of it, just remove it. They are meant to be helpers and are
- * not required. It's your world baby, you can do whatever you want.
 */
 
 
@@ -114,6 +108,31 @@ Uncomment  the below to exclude first section from animation
 //sr.reveal('.single-post:not(:first-child)');
 
 sr.reveal('.single-post');
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {stickyNav()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+var mobilenav = document.getElementById("mobile-nav");
+
+// Get the offset position of the navbar
+var sticky_nav = navbar.offsetTop;
+var sticky_nav_mobile = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickyNav() {
+  if (window.pageYOffset >= sticky_nav) {
+    navbar.classList.add("sticky_nav");
+  } else {
+    navbar.classList.remove("sticky_nav");
+  }
+	if (window.pageYOffset >= sticky_nav_mobile) {
+		mobilenav.classList.add("mobile_sticky")
+  } else {
+		mobilenav.classList.remove("mobile_sticky");
+  }
+}
 
 
 

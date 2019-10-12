@@ -24,6 +24,19 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 
+nav {
+	background: transparent;
+	margin-top: -50px;
+	height: 50px;
+}
+
+.sticky_nav {
+	position: fixed;
+	top: 50px;
+	width: 100%;
+	background-color: $accent;
+}
+
 .nav {
 	border: 0;
 
@@ -56,7 +69,7 @@ NAVIGATION STYLES
 		*/
 		ul.sub-menu,
 		ul.children {
-			margin-top: 0;
+			margin-top: -5px;
 			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
@@ -114,6 +127,8 @@ NAVIGATION STYLES
 
 	} /* end .menu ul li */
 
+
+
 	/* highlight current page */
 	li.current-menu-item,
 	li.current_page_item,
@@ -122,6 +137,16 @@ NAVIGATION STYLES
 	}  /* end current highlighters */
 
 } /* end .nav */
+
+.footer-nav {
+	li{
+		ul.sub-menu,
+		ul.children {
+			visibility: visible;
+			position: relative;
+		}
+	}
+}
 
 /*********************
 SIDEBARS & ASIDES
