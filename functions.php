@@ -358,5 +358,21 @@ function my_acf_settings_dir( $dir ) {
 // 4. Include ACF
 include_once( get_stylesheet_directory() . '/inc/acf/acf.php' );
 
+// Activate ACF Options Page
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> true,
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Site-Wide',
+		'menu_title'	=> 'Site-Wide',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+}
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

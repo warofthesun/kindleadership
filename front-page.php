@@ -1,6 +1,5 @@
 <!--frontpage-->
 <?php get_header(); ?>
-front page
 			<div id="content">
 
 				<div id="inner-content" class="wrap  row">

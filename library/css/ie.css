@@ -226,7 +226,7 @@ nav {
   height: 50px; }
 
 .sticky_nav {
-  position: fixed;
+  position: fixed !important;
   top: 50px;
   width: 100%;
   background-color: #DA380C; }
