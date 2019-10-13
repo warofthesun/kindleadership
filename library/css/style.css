@@ -1972,6 +1972,56 @@ nav {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.quote_image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .quote_image .quote_border {
+    width: 95%;
+    height: 90%;
+    border: 1px solid #fff;
+    position: absolute;
+    -ms-flex-item-align: center;
+        align-self: center; }
+  .quote_image .quote_container {
+    width: 30%;
+    background-color: rgba(218, 56, 12, 0.7);
+    height: 500px;
+    color: #fff;
+    margin-right: auto;
+    margin-left: 10%;
+    padding: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .quote_image .quote_container.right {
+      margin-left: auto;
+      margin-right: 10%; }
+    .quote_image .quote_container .quote_body {
+      font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.3em; }
+    .quote_image .quote_container .quote_attribution {
+      font-family: "Anton", "Georgia", Cambria, Times New Roman, Times, serif;
+      font-size: 1.2em;
+      letter-spacing: .08em;
+      margin-top: .5em; }
+
 #content {
   margin-top: 1.5em; }
 

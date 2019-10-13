@@ -68,6 +68,7 @@ if ( ! isset( $content_width ) ) {
 add_image_size( 'starter-thumb-600', 600, 150, true );
 add_image_size( 'starter-thumb-300', 300, 100, true );
 add_image_size( 'gallery-image', 680, 450, true );
+add_image_size( 'quote_image', 1000, 510, true );
 
 /*
 to add more sizes, simply copy a line from above
@@ -372,7 +373,18 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Site-Wide',
 		'parent_slug'	=> 'theme-general-settings',
 	));
-}
 
+  acf_add_options_sub_page(array(
+		'page_title' 	=> 'Front-Page',
+		'menu_title'	=> 'Front-Page',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+  acf_add_options_sub_page(array(
+		'page_title' 	=> 'Quote Graphics',
+		'menu_title'	=> 'Quote Graphics',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+}
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
