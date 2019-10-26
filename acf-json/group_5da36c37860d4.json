@@ -1,11 +1,30 @@
 {
-    "key": "group_5da28eb202f57",
-    "title": "Quote Graphics",
+    "key": "group_5da36c37860d4",
+    "title": "What We Do",
     "fields": [
         {
-            "key": "field_5da28f1622446",
-            "label": "Quote Graphics",
-            "name": "quote_graphics",
+            "key": "field_5da3765374f49",
+            "label": "Header",
+            "name": "what_we_do_header",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5da36c48a9290",
+            "label": "Company Offerings",
+            "name": "company_offerings",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -15,22 +34,22 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5da28f9522449",
+            "collapsed": "field_5da36c92a9292",
             "min": 0,
             "max": 0,
             "layout": "table",
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5da28f2d22447",
-                    "label": "Background Image",
-                    "name": "background_image",
+                    "key": "field_5da36c68a9291",
+                    "label": "Icon",
+                    "name": "icon",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -46,34 +65,15 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5da28f6e22448",
-                    "label": "Quote Text",
-                    "name": "quote_text",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_5da28f9522449",
-                    "label": "Quote Attribution",
-                    "name": "quote_attribution",
+                    "key": "field_5da36c92a9292",
+                    "label": "Header",
+                    "name": "header",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "35",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -84,30 +84,40 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5da28faf2244a",
-                    "label": "Quote Position",
-                    "name": "quote_position",
-                    "type": "radio",
+                    "key": "field_5da36ca5a9293",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "15",
+                        "width": "40",
                         "class": "",
                         "id": ""
                     },
-                    "choices": {
-                        "left": "Left",
-                        "right": "Right"
-                    },
-                    "allow_null": 0,
-                    "other_choice": 0,
                     "default_value": "",
-                    "layout": "vertical",
-                    "return_format": "value",
-                    "save_other_choice": 0
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
                 }
             ]
+        },
+        {
+            "key": "field_5da3766074f4a",
+            "label": "Call to Action",
+            "name": "call_to_action",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -127,5 +137,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1570934924
+    "modified": 1571685103
 }

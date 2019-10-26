@@ -15,7 +15,7 @@
               ?>
 
               <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-                <div class="hero--image"><?php the_post_thumbnail('gallery-image'); ?></div>
+                <div class="hero--image"><?php the_post_thumbnail('gallery_image'); ?></div>
                 <header class="article-header entry-header">
 
                   <h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>

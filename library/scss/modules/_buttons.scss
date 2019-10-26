@@ -27,14 +27,15 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 %btn {
   display: inline-block;
   position: relative;
-  font-family: $body;
+  font-family: $display;
+  text-transform: uppercase;
   text-decoration: none;
   color: $white;
-  font-size: 0.9em;
-  font-size: 34px;
+  font-size: 1.1em;
   line-height: 34px;
+  letter-spacing: .09em;
   font-weight: normal;
-  padding: 0 24px;
+  padding: .5em 1.5em;
   border-radius: 4px;
   border: 0;
   cursor: pointer;

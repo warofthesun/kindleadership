@@ -65,10 +65,9 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'starter-thumb-600', 600, 150, true );
-add_image_size( 'starter-thumb-300', 300, 100, true );
-add_image_size( 'gallery-image', 680, 450, true );
+add_image_size( 'gallery_image', 680, 450, true );
 add_image_size( 'quote_image', 1000, 510, true );
+add_image_size( 'medium_square', 400, 400, true );
 
 /*
 to add more sizes, simply copy a line from above
@@ -80,12 +79,6 @@ auto-cropped.
 To call a different size, simply change the text
 inside the thumbnail function.
 
-For example, to call the 300 x 100 sized image,
-we would use the function:
-<?php the_post_thumbnail( 'starter-thumb-300' ); ?>
-for the 600 x 150 image:
-<?php the_post_thumbnail( 'starter-thumb-600' ); ?>
-
 You can change the names and dimensions to whatever
 you like. Enjoy!
 */
@@ -94,7 +87,7 @@ add_filter( 'image_size_names_choose', 'starter_custom_image_sizes' );
 
 function starter_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'gallery-image' => __('Gallery Image'),
+        'gallery_image' => __('Gallery Image'),
         'starter-thumb-600' => __('600px by 150px'),
         'starter-thumb-300' => __('300px by 100px'),
     ) );

@@ -9,8 +9,9 @@
   },
   "devDependencies": {
     "gulp-autoprefixer": "^4.1.0",
-    "gulp-clean-css": "^3.9.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-scss-lint": "^1.0.0",
     "lodash": ">=4.17.5"
   },
   "scripts": {

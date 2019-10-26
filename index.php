@@ -10,7 +10,7 @@
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( ' single-post' ); ?> role="article">
-								<div class="hero--image"><?php the_post_thumbnail('gallery-image'); ?></div>
+								<div class="hero--image"><?php the_post_thumbnail('gallery_image'); ?></div>
 								<header class="article-header">
 
 									<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>

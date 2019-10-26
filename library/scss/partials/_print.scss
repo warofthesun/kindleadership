@@ -1,16 +1,17 @@
 /******************************************************************
-PRINT STYLES 
+PRINT STYLES
 ******************************************************************/
 
   * {
     background: transparent !important;
     color: black !important;
     text-shadow: none !important;
-    filter:none !important;
+    filter: none !important;
     -ms-filter: none !important;
   }
 
-  a, a:visited {
+  a,
+  a:visited {
     color: #444 !important;
     text-decoration: underline;
 
@@ -25,14 +26,15 @@ PRINT STYLES
     }
   }
 
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
+  .ir a::after,
+  a[href^="javascript:"]::after,
+  a[href^="#"]::after {
+    content: '';
   }
 
-  pre, blockquote {
-    border: 1px solid #999;
+  pre,
+  blockquote {
+    border: 1px solid $primary-md;
     page-break-inside: avoid;
   }
 
@@ -40,7 +42,8 @@ PRINT STYLES
     display: table-header-group;
   }
 
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid;
   }
 
@@ -49,10 +52,12 @@ PRINT STYLES
   }
 
     @page {
-      margin: 0.5cm;
+      margin: .5cm;
     }
 
-    p, h2, h3 {
+    p,
+    h2,
+    h3 {
       orphans: 3;
       widows: 3;
     }

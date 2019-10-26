@@ -1,6 +1,4 @@
-/*********************
-GENERAL STYLES
-*********************/
+// GENERAL STYLES
 
 body {
 	font-family: $body;
@@ -39,59 +37,59 @@ img {
 	}
 }
 
-/********************
-WORDPRESS BODY CLASSES
-style a page via class
-********************/
+.center-content {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
 
-.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
-.blog {}                          /* blog template page */
-.archive {}                       /* archive page */
-.date {}                          /* date archive page */
-	.date-paged-1 {}                /* replace the number to the corresponding page number */
-.search {}                        /* search page */
-	.search-results {}              /* search result page */
-	.search-no-results {}           /* no results search page */
-	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
-.error404 {}                      /* 404 page */
-.single {}                        /* single post page */
-	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
-	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
-.attachment {}                    /* attatchment page */
-	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
-	.attachment-mime-type {}        /* style mime type pages */
-.author {}                        /* author page */
-	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
-	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
-.category {}                      /* category page */
-	.category-1 {}                  /* individual category page (i.e. body.category-6) */
-	.category-paged-1 {}            /* replace the number to the corresponding page number */
-.tag {}                           /* tag page */
-	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
-	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
-.page-template {}                 /* custom page template page */
-	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
-	.page-paged-1 {}                /* replace the number to the corresponding page number */
-	.page-parent {}                 /* parent page template */
-	.page-child {}                  /* child page template */
-	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
-.logged-in {}                     /* if user is logged in */
-.paged {}                         /* paged items like search results or archives */
-	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+// WORDPRESS BODY CLASSES
+// style a page via class
 
-/*********************
-LAYOUT & GRID STYLES
-*********************/
+.rtl {}                           // for sites that are read right to left (i.e. hebrew)
+.home {}                          // home page
+.blog {}                          // blog template page
+.archive {}                       // archive page
+.date {}                          // date archive page
+	.date-paged-1 {}                // replace the number to the corresponding page number
+.search {}                        // search page
+	.search-results {}              // search result page
+	.search-no-results {}           // no results search page
+	.search-paged-1 {}              // individual paged search (i.e. body.search-paged-3)
+.error404 {}                      // 404 page
+.single {}                        // single post page
+	.postid-1 {}                    // individual post page by id (i.e. body.postid-73)
+	.single-paged-1 {}              // individual paged single (i.e. body.single-paged-3)
+.attachment {}                    // attatchment page
+	.attachmentid-1 {}              // individual attatchment page (i.e. body.attachmentid-763)
+	.attachment-mime-type {}        // style mime type pages
+.author {}                        // author page
+	.author-nicename {}             // user nicename (i.e. body.author-samueladams)
+	.author-paged-1 {}              // paged author archives (i.e. body.author-paged-4) for page 4
+.category {}                      // category page
+	.category-1 {}                  // individual category page (i.e. body.category-6)
+	.category-paged-1 {}            // replace the number to the corresponding page number
+.tag {}                           // tag page
+	.tag-slug {}                    // individual tag page (i.e. body.tag-news)
+	.tag-paged-1 {}                 // replace the number to the corresponding page number
+.page-template {}                 // custom page template page
+	.page-template-page-php {}      // individual page template (i.e. body.page-template-contact-php
+	.page-paged-1 {}                // replace the number to the corresponding page number
+	.page-parent {}                 // parent page template
+	.page-child {}                  // child page template
+	.parent-pageid-1 {}             // replace the number to the corresponding page number
+.logged-in {}                     // if user is logged in
+.paged {}                         // paged items like search results or archives
+	.paged-1 {}                     // individual paged (i.e. body.paged-3)
+
+// LAYOUT & GRID STYLES
 
 .wrap {
 	width: 96%;
 	margin: 0 auto;
 }
 
-/*********************
-LINK STYLES
-*********************/
+// LINK STYLES
 
 a, a:visited {
 	color: $link-color;
@@ -106,66 +104,63 @@ a, a:visited {
 
 	}
 
-	/* mobile tap color */
+	// mobile tap color
 	&:link {
-		/*
-		this highlights links on iPhones/iPads.
-		so it basically works like the :hover selector
-		for mobile devices.
-		*/
+		// this highlights links on iPhones/iPads.
+		// so it basically works like the :hover selector
+		// for mobile devices.
+
 		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
 	}
 }
 
-/******************************************************************
-H1, H2, H3, H4, H5 STYLES
-******************************************************************/
+// H1, H2, H3, H4, H5 STYLES
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
 	font-family: $display;
-	/*
-	if you're going to use webfonts, be sure to check your weights
-	http://css-tricks.com/watch-your-font-weight/
-	*/
 
-	/* removing text decoration from all headline links */
+	// removing text decoration from all headline links
 	a {
 		text-decoration: none;
 	}
 }
 
-h1, .h1 {
+h1,
+.h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
 }
 
-h2, .h2 {
+h2,
+.h2 {
 	font-size: 1.75em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
+	text-transform: uppercase;
 }
 
-h3, .h3 {
+h3,
+.h3 {
 	font-size: 1.125em;
 }
 
-h4, .h4 {
+h4,
+.h4 {
 	font-size: 1.1em;
 	font-weight: 700;
 }
 
-h5, .h5 {
+h5,
+.h5 {
 	font-size: 0.846em;
 	line-height: 2.09em;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 
-/*********************
-HEADER STYLES
-*********************/
+// HEADER STYLES
 
 .header {
 	background-color: $primary-dk;
@@ -208,18 +203,7 @@ HEADER STYLES
 	}
 }
 
-/*********************
-NAVIGATION STYLES
-*********************/
-
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-
-*/
+// NAVIGATION STYLES
 
 #navbar {
 	position: relative;
@@ -313,13 +297,6 @@ nav {
 
 		&:last-child {}
 
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
 		ul.sub-menu,
 		ul.children {
 
@@ -343,23 +320,21 @@ nav {
 
 		}
 
-	} /* end .menu li */
+	} // end .menu li
 
-	/* highlight current page */
+	// highlight current page
 	li.current-menu-item,
 	li.current_page_item,
 	li.current_page_ancestor {
 
 		a {}
 
-	}  /* end current highlighters */
+	}  // end current highlighters
 
-} /* end .nav */
+} // end .nav
 
 
-/*********************
-POSTS & CONTENT STYLES
-*********************/
+// POSTS & CONTENT STYLES
 
 .quote_image {
 	background-repeat: no-repeat;
@@ -423,6 +398,133 @@ article {
 	}
 }
 
+section {
+	h2 {
+		text-align: center;
+		margin: 2em;
+	}
+	&.what-we-do {
+		>ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		li {
+			width: 50%;
+			display: flex;
+			flex-direction: row;
+			height: 250px;
+
+			&:nth-of-type(4n+1),
+			&:nth-of-type(4n+1) + * {
+			  flex-direction: row;
+			}
+
+			&:nth-of-type(4n+3),
+			&:nth-of-type(4n+3) + * {
+  			flex-direction: row-reverse;
+			}
+
+			.icon {
+				width: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				img {
+					width: 100%;
+					max-width: 150px;
+					height: auto;
+				}
+			}
+
+			.content {
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				background-color: $primary-dk;
+				padding: 1em;
+
+				h3 {
+					margin: 0;
+					color: $accent;
+				}
+
+				p {
+					margin: 0;
+					color: $white;
+				}
+			}
+		}
+	}
+
+		.accent-btn {
+			margin: 2em 0;
+		}
+	}
+
+	&.impact-charts {
+		ul {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			li {
+				flex-basis: calc((100% / 5) - 1em);
+				padding: 1em;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+
+				.impact-description {
+					margin-top: 1em;
+				}
+			}
+		}
+	}
+
+	&.contact-section {
+
+		.contact-section__container {
+			background-color: $primary-md;
+			padding: 1em;
+			display: flex;
+			justify-content: center;
+		}
+
+		.contact-section__form_header {
+			text-align: center;
+		}
+
+		.contact-section__form {
+			width: 100%;
+			max-width: 650px;
+		}
+
+		.accent-btn {
+			width: 200px;
+			margin: 0 auto;
+			display: block;
+		}
+
+		.wpcf7-form-control {
+			&-wrap {
+				width: 100%;
+				display: inline-block;
+				margin-bottom: 1em;
+
+				select {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+}
 		.hentry {
 			background-color: $white;
 			border-radius: 3px;
