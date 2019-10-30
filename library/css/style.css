@@ -1872,7 +1872,7 @@ section.what-we-do > ul {
               align-items: center; }
       section.what-we-do > ul li .icon img {
         width: 100%;
-        max-width: 150px;
+        max-width: 100px;
         height: auto; }
     section.what-we-do > ul li .content {
       width: 50%;
