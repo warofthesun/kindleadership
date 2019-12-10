@@ -18,11 +18,13 @@
 
 									if( $images ): ?>
 										<div class="quote_image" style="background-image: url('<?php echo esc_url($images[$rand]['sizes']['quote_image']); ?>');height:500px;width:100%;">
-											<div class="quote_border"></div>
-											<div class="quote_container <?php echo $images[$rand]['alt']; ?>">
-												<div class="quote_body">"<?php echo $images[$rand]['caption']; ?>"</div>
-												<div class="quote_attribution"><?php echo $images[$rand]['title']; ?></div>
-											</div>
+											<?php if ($images[$rand]['caption']) : ?>
+												<div class="quote_border"></div>
+												<div class="quote_container <?php echo $images[$rand]['alt']; ?>">
+													<div class="quote_body">"<?php echo $images[$rand]['caption']; ?>"</div>
+													<div class="quote_attribution"><?php echo $images[$rand]['title']; ?></div>
+												</div>
+												<?php endif; ?>
 										</div>
 									<?php endif; ?>
 

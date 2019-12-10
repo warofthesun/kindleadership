@@ -60,8 +60,8 @@
 				<div id="inner-header" class="wrap row">
 
 					<div class="hero_section">
-						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-						<div class="hero_copy">this will be the hero text</div>
+						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php if ( get_field('site_title', 'option') ): the_field('site_title', 'option'); else : bloginfo('name'); endif; ?></a></p>
+						<?php if( get_field('site_sub-title', 'option') ) : ?><div class="hero_copy"><?php the_field('site_sub-title', 'option');?></div><?php endif; ?>
 					</div>
 
 				</div>
