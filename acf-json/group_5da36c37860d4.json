@@ -68,7 +68,7 @@
                     "key": "field_5da36c92a9292",
                     "label": "Header",
                     "name": "header",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -79,9 +79,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_5da36ca5a9293",
@@ -137,5 +137,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1575854610
+    "modified": 1575950060
 }

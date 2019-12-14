@@ -403,6 +403,20 @@ section {
 		text-align: center;
 		margin: 2em;
 	}
+
+	&.mission-statement {
+		background-color: $primary-dk;
+		color: $primary-lt;
+		margin-top: 3em;
+		margin-bottom: 3em;
+		padding: 3em;
+		text-align: center;
+		font-family: $display;
+		font-size: 1.4em;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
 	&.what-we-do {
 		>ul {
 		display: flex;

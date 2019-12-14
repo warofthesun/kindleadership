@@ -68,7 +68,7 @@
                     "key": "field_5dae20ad13ee8",
                     "label": "Caption",
                     "name": "caption",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -79,9 +79,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
                 }
             ]
         }
@@ -103,5 +103,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572803028
+    "modified": 1575950007
 }

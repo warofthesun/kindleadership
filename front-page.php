@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 			<div id="content">
 
-				<div id="inner-content" class="wrap">
+				<div id="inner-content">
 
 						<main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
@@ -10,7 +10,7 @@
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<section class="entry-content " itemprop="articleBody">
+								<section class="entry-content wrap" itemprop="articleBody">
 									<?php
 
 									$images = get_field('quote_gallery', 'option');
@@ -27,9 +27,15 @@
 												<?php endif; ?>
 										</div>
 									<?php endif; ?>
-
 								</section>
-								<section class="what-we-do">
+								<?php if(get_field('mission_statement', 'option') ) : ?>
+									<section class="mission-statement">
+										<div class="wrap">
+											<?php the_field('mission_statement', 'option'); ?>
+										</div></div>
+									</section>
+								<?php endif; ?>
+								<section class="what-we-do wrap">
 									<h2><?php the_field('what_we_do_header', 'option'); ?></h2>
 									<?php if( have_rows('company_offerings', 'option') ): ?>
 									<ul>
@@ -73,7 +79,7 @@
 									<?php endif; ?>
 								</section>
 								<?php if(get_field('impact_stats_header', 'option') ) : ?>
-									<section class="impact-charts">
+									<section class="impact-charts wrap">
 										<h2><?php the_field('impact_stats_header', 'option'); ?></h2>
 										<?php if( have_rows('impact_charts', 'option') ): ?>
 										<ul>
@@ -96,23 +102,23 @@
 									</section>
 								<?php endif; ?>
 							</article>
-						</main>
-				</div>
-				<section class="contact-section">
-					<h2><?php the_field('contact_section_header', 'option'); ?></h2>
-					<div class="contact-section__container">
-						<div class="contact-section__form">
-							<p class="contact-section__form_header"><?php the_field('contact_section_form_header', 'option'); ?></p>
-							<?php
-								$form = get_field('contact_form', 'option');
-								echo do_shortcode($form);
-							?>
-						</div>
-					</div>
-				</section>
-				<?php endwhile; else : endif; ?>
 
+							<section class="contact-section">
+								<h2><?php the_field('contact_section_header', 'option'); ?></h2>
+								<div class="contact-section__container">
+									<div class="contact-section__form">
+										<p class="contact-section__form_header"><?php the_field('contact_section_form_header', 'option'); ?></p>
+										<?php
+											$form = get_field('contact_form', 'option');
+											echo do_shortcode($form);
+										?>
+									</div>
+								</div>
+							</section>
+							<?php endwhile; else : endif; ?>
+				</main>
 			</div>
+		</div>
 
 
 <?php get_footer(); ?>

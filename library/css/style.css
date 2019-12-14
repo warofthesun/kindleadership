@@ -1827,6 +1827,18 @@ section h2 {
   text-align: center;
   margin: 2em; }
 
+section.mission-statement {
+  background-color: #4a4a4a;
+  color: white;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 3em;
+  text-align: center;
+  font-family: "Anton", "Georgia", Cambria, Times New Roman, Times, serif;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
 section.what-we-do > ul {
   display: -webkit-box;
   display: -ms-flexbox;
