@@ -1828,16 +1828,29 @@ section h2 {
   margin: 2em; }
 
 section.mission-statement {
-  background-color: #cfcfcf;
+  background-color: #75a0d9;
   color: #fff;
-  margin-top: 3em;
+  margin-top: 0em;
   margin-bottom: 3em;
   padding: 3em;
   text-align: center;
   font-family: "Anton", "Georgia", Cambria, Times New Roman, Times, serif;
-  font-size: 1.4em;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
+  font-size: 1.8em;
+  letter-spacing: 2px; }
+  section.mission-statement .wrap:before {
+    content: "";
+    width: 80%;
+    margin: 0 auto;
+    border-top: 2px solid #fff;
+    display: block;
+    margin-bottom: 1.5em; }
+  section.mission-statement .wrap:after {
+    content: "";
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 2px solid #fff;
+    display: block;
+    margin-top: 1.5em; }
 
 section.what-we-do > ul {
   display: -webkit-box;

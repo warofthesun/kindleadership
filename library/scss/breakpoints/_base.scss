@@ -405,16 +405,35 @@ section {
 	}
 
 	&.mission-statement {
-		background-color: $primary-md;
+		background-color: $chalky-blue;
 		color: $white;
-		margin-top: 3em;
+		margin-top: 0em;
 		margin-bottom: 3em;
 		padding: 3em;
 		text-align: center;
 		font-family: $display;
-		font-size: 1.4em;
-		text-transform: uppercase;
-		letter-spacing: 1px;
+		font-size: 1.8em;
+		letter-spacing: 2px;
+
+		.wrap {
+			&:before {
+				content: "";
+				width: 80%;
+				margin: 0 auto;
+				border-top: 2px solid $white;
+				display: block;
+				margin-bottom: 1.5em;
+			}
+
+			&:after {
+				content: "";
+				width: 80%;
+				margin: 0 auto;
+				border-bottom: 2px solid $white;
+				display: block;
+				margin-top: 1.5em;
+			}
+		}
 	}
 
 	&.what-we-do {

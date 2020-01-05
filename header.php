@@ -61,11 +61,13 @@
 
 					<div class="hero_section">
 						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php if ( get_field('site_title', 'option') ): the_field('site_title', 'option'); else : bloginfo('name'); endif; ?></a></p>
-						<?php if( get_field('site_sub-title', 'option') ) : ?><div class="hero_copy"><?php the_field('site_sub-title', 'option');?></div><?php endif; ?>
+						<div class="hero_copy"><?php if( get_field('site_sub-title', 'option') ) : ?><?php the_field('site_sub-title', 'option'); else : bloginfo('description');?><?php endif; ?></div>
 					</div>
 
 				</div>
-				<div class="overlay"></div>
+				<?php if (get_field('include_overlay', 'option') ) : ?>
+					<div class="overlay"></div>
+				<?php endif; ?>
 			</header>
 			<nav role="navigation" id="navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
 				<?php wp_nav_menu(array(

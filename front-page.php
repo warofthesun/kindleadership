@@ -6,7 +6,7 @@
 
 						<main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php if (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -32,7 +32,7 @@
 									<section class="mission-statement">
 										<div class="wrap">
 											<?php the_field('mission_statement', 'option'); ?>
-										</div></div>
+										</div>
 									</section>
 								<?php endif; ?>
 								<section class="what-we-do wrap">
@@ -115,7 +115,7 @@
 									</div>
 								</div>
 							</section>
-							<?php endwhile; else : endif; ?>
+							<?php endif; ?>
 				</main>
 			</div>
 		</div>

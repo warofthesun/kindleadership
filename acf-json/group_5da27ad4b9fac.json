@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -27,11 +27,30 @@
             "mime_types": ""
         },
         {
+            "key": "field_5e126a4b09f8d",
+            "label": "Include Overlay",
+            "name": "include_overlay",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5ded9c9fb3c11",
             "label": "Site Title",
             "name": "site_title",
             "type": "text",
-            "instructions": "If left empty site title will be displayed",
+            "instructions": "If left empty Site Title (from Settings > General) will be displayed",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -50,7 +69,7 @@
             "label": "Site Sub-Title",
             "name": "site_sub-title",
             "type": "text",
-            "instructions": " ",
+            "instructions": "If left empty Tagline (from Settings > General) will be displayed",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -82,5 +101,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1575853272
+    "modified": 1578265420
 }
