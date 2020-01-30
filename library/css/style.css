@@ -1226,7 +1226,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 .accent-btn, .comment-reply-link, #submit {
   display: inline-block;
   position: relative;
-  font-family: "Anton", "Georgia", Cambria, Times New Roman, Times, serif;
+  font-family: "Roboto", "Georgia", Cambria, Times New Roman, Times, sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
@@ -1312,7 +1312,7 @@ textarea,
   border: 0;
   width: 100%;
   max-width: 400px;
-  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f7f8fa; }
   input[type="text"]:focus, input[type="text"]:active,
   input[type="password"]:focus,
@@ -1552,7 +1552,7 @@ select {
 BASE (MOBILE) SIZE
 *********************/
 body {
-  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
@@ -1613,8 +1613,8 @@ a, a:visited {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
-  font-weight: 500;
-  font-family: "Anton", "Georgia", Cambria, Times New Roman, Times, serif; }
+  font-weight: 900;
+  font-family: "Roboto", "Georgia", Cambria, Times New Roman, Times, sans-serif; }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
     text-decoration: none; }
 
@@ -1678,11 +1678,14 @@ h5,
 
 #logo {
   margin: 0.75em 0 0 0;
-  letter-spacing: .04em;
+  letter-spacing: .02em;
   text-align: center;
-  font-size: 3em; }
+  font-size: 3em;
+  font-weight: 900; }
   #logo a {
     color: #fff; }
+  #logo span {
+    font-weight: 400; }
 
 #navbar {
   position: relative;
@@ -1740,7 +1743,8 @@ nav {
   display: none;
   height: 0;
   -webkit-transition: all .5s;
-  transition: all .5s; }
+  transition: all .5s;
+  font-weight: 900; }
   .nav.footer-nav {
     display: block; }
     .nav.footer-nav li {
@@ -1759,7 +1763,7 @@ nav {
       color: #fff;
       text-decoration: none;
       padding: 0.75em;
-      font-family: "Anton", "Georgia", Cambria, Times New Roman, Times, serif;
+      font-family: "Roboto", "Georgia", Cambria, Times New Roman, Times, sans-serif;
       text-transform: uppercase;
       letter-spacing: .1em; }
     .nav li ul.sub-menu li a,
@@ -1808,10 +1812,10 @@ nav {
       margin-left: auto;
       margin-right: 10%; }
     .quote_image .quote_container .quote_body {
-      font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.3em; }
     .quote_image .quote_container .quote_attribution {
-      font-family: "Anton", "Georgia", Cambria, Times New Roman, Times, serif;
+      font-family: "Roboto", "Georgia", Cambria, Times New Roman, Times, sans-serif;
       font-size: 1.2em;
       letter-spacing: .08em;
       margin-top: .5em; }
@@ -1834,7 +1838,7 @@ section.mission-statement {
   margin-bottom: 3em;
   padding: 3em;
   text-align: center;
-  font-family: "Anton", "Georgia", Cambria, Times New Roman, Times, serif;
+  font-family: "Roboto", "Georgia", Cambria, Times New Roman, Times, sans-serif;
   font-size: 1.8em;
   letter-spacing: 2px; }
   section.mission-statement .wrap:before {
@@ -1947,7 +1951,8 @@ section.impact-charts ul {
       margin-top: 1em; }
 
 section.contact-section .contact-section__container {
-  background-color: #cfcfcf;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;

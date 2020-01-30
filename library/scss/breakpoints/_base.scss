@@ -118,7 +118,7 @@ a, a:visited {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
-	font-weight: 500;
+	font-weight: 900;
 	font-family: $display;
 
 	// removing text decoration from all headline links
@@ -194,12 +194,17 @@ h5,
 
 #logo {
 	margin: 0.75em 0 0 0;
-	letter-spacing: .04em;
+	letter-spacing: .02em;
 	text-align: center;
 	font-size: 3em;
+	font-weight: 900;
 
 	a {
 		color: $white;
+	}
+	
+	span {
+		font-weight: 400;
 	}
 }
 
@@ -263,6 +268,7 @@ nav {
 	display: none;
 	height: 0;
 	transition: all .5s;
+	font-weight: 900;
 
 	&.footer-nav {
 		display: block;
@@ -523,7 +529,8 @@ section {
 	&.contact-section {
 
 		.contact-section__container {
-			background-color: $primary-md;
+			background-size: cover;
+			background-repeat: no-repeat;
 			padding: 1em;
 			display: flex;
 			justify-content: center;

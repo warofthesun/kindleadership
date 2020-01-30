@@ -28,6 +28,29 @@
 										</div>
 									<?php endif; ?>
 								</section>
+								<?php if(get_field('impact_stats_header', 'option') ) : ?>
+									<section class="impact-charts wrap">
+										<h2><?php the_field('impact_stats_header', 'option'); ?></h2>
+										<?php if( have_rows('impact_charts', 'option') ): ?>
+										<ul>
+											<?php while ( have_rows('impact_charts', 'option') ) : the_row(); ?>
+											<li>
+												<?php
+													$image = get_sub_field('chart_graphic');
+													$size = 'medium_square';
+
+														if( $image ) {
+															echo wp_get_attachment_image( $image, $size );
+														}
+
+													?>
+												<div class="impact-description"><?php the_sub_field('caption');?></div>
+											</li>
+											<?php endwhile; ?>
+										</ul>
+									<?php endif; ?>
+									</section>
+								<?php endif; ?>
 								<?php if(get_field('mission_statement', 'option') ) : ?>
 									<section class="mission-statement">
 										<div class="wrap">
@@ -78,34 +101,11 @@
 									</div>
 									<?php endif; ?>
 								</section>
-								<?php if(get_field('impact_stats_header', 'option') ) : ?>
-									<section class="impact-charts wrap">
-										<h2><?php the_field('impact_stats_header', 'option'); ?></h2>
-										<?php if( have_rows('impact_charts', 'option') ): ?>
-										<ul>
-											<?php while ( have_rows('impact_charts', 'option') ) : the_row(); ?>
-											<li>
-												<?php
-													$image = get_sub_field('chart_graphic');
-													$size = 'medium_square';
-
-													  if( $image ) {
-													  	echo wp_get_attachment_image( $image, $size );
-													  }
-
-													?>
-												<div class="impact-description"><?php the_sub_field('caption');?></div>
-											</li>
-											<?php endwhile; ?>
-										</ul>
-									<?php endif; ?>
-									</section>
-								<?php endif; ?>
 							</article>
 
 							<section class="contact-section">
 								<h2><?php the_field('contact_section_header', 'option'); ?></h2>
-								<div class="contact-section__container">
+								<div class="contact-section__container" style="background-image: url(<?php the_field('contact_form_background', 'option'); ?>);">
 									<div class="contact-section__form">
 										<p class="contact-section__form_header"><?php the_field('contact_section_form_header', 'option'); ?></p>
 										<?php

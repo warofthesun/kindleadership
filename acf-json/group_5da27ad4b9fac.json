@@ -46,25 +46,6 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_5ded9c9fb3c11",
-            "label": "Site Title",
-            "name": "site_title",
-            "type": "text",
-            "instructions": "If left empty Site Title (from Settings > General) will be displayed",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "30",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5ded9cc0b3c12",
             "label": "Site Sub-Title",
             "name": "site_sub-title",
@@ -101,5 +82,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578265420
+    "modified": 1580352457
 }

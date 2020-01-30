@@ -60,7 +60,7 @@
 				<div id="inner-header" class="wrap row">
 
 					<div class="hero_section">
-						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php if ( get_field('site_title', 'option') ): the_field('site_title', 'option'); else : bloginfo('name'); endif; ?></a></p>
+						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow">Kind<span>Leadership</span></a></p>
 						<div class="hero_copy"><?php if( get_field('site_sub-title', 'option') ) : ?><?php the_field('site_sub-title', 'option'); else : bloginfo('description');?><?php endif; ?></div>
 					</div>
 
