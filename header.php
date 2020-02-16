@@ -35,7 +35,7 @@
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
-		<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+		<script src="https://kit.fontawesome.com/4ae5061b13.js" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 		<script>
       window.sr = ScrollReveal({ duration: 600, reset: true, easing: 'ease-in', scale: .98, distance:'50px'});

@@ -12,14 +12,15 @@ $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
 $text-color:        #5c6b80;
 $meta-gray:         #9fa6b4;
+$chalky-blue:       #75a0d9;
+$accent-yellow:     #ffcc5e;
 
 $primary:           #e8e8e8;
 $primary-lt:        lighten($primary, 10%);
 $primary-md:        darken($primary, 10%);
 $primary-dk:        #4a4a4a;
-$secondary:         #2980b9;
-$accent:            #da380c;
-$chalky-blue:       #75a0d9;
+$secondary:         #7DC52C;
+$accent:            darken($chalky-blue, 20%);
 
 $link-color:        $accent;
 $link-hover:        darken($link-color, 9%);

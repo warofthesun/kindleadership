@@ -341,7 +341,7 @@ probably best not to use it. I mean, were you going to anyway? */
   body#tinymce.wp-editor ol,
   body#tinymce.wp-editor ul {
     padding: 0;
-    list-style-type: none; }
+    list-style-type: normal; }
   body#tinymce.wp-editor nav ul,
   body#tinymce.wp-editor nav ol {
     list-style: none;
@@ -435,11 +435,11 @@ probably best not to use it. I mean, were you going to anyway? */
     word-break: normal;
     word-wrap: normal; }
   body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
-    color: #da380c;
+    color: #326bb6;
     /* on hover */
     /* on click */ }
     body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
-      color: #ae2d0a; }
+      color: #285692; }
     body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
   body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {
@@ -494,7 +494,7 @@ probably best not to use it. I mean, were you going to anyway? */
   body#tinymce.wp-editor blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #da380c;
+    border-left: 3px solid #326bb6;
     font-style: italic;
     color: #9fa6b4; }
   body#tinymce.wp-editor dd {

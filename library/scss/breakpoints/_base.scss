@@ -1,4 +1,5 @@
 // GENERAL STYLES
+@import 'mixins/dynamic_list-item_width';
 
 body {
 	font-family: $body;
@@ -202,7 +203,7 @@ h5,
 	a {
 		color: $white;
 	}
-	
+
 	span {
 		font-weight: 400;
 	}
@@ -228,6 +229,7 @@ nav {
 	top: 0px;
 	width: 100%;
 	background-color: $accent;
+	box-shadow: 0 2px 5px rgba($black, .3), 0 2px 15px rgba($black, .5);
 }
 
 #mobile-nav {
@@ -410,34 +412,41 @@ section {
 		margin: 2em;
 	}
 
-	&.mission-statement {
-		background-color: $chalky-blue;
-		color: $white;
-		margin-top: 0em;
-		margin-bottom: 3em;
-		padding: 3em;
-		text-align: center;
-		font-family: $display;
-		font-size: 1.8em;
-		letter-spacing: 2px;
+	.full_width_content {
+
+		&_background-color {
+			color: $white;
+		}
 
 		.wrap {
-			&:before {
-				content: "";
-				width: 80%;
-				margin: 0 auto;
-				border-top: 2px solid $white;
-				display: block;
-				margin-bottom: 1.5em;
-			}
+			margin-top: 0em;
+			margin-bottom: 3em;
+			font-family: $display;
+			letter-spacing: 2px;
+		}
 
-			&:after {
-				content: "";
-				width: 80%;
-				margin: 0 auto;
-				border-bottom: 2px solid $white;
-				display: block;
-				margin-top: 1.5em;
+		&_borders {
+			.wrap {
+				padding-top: 4em;
+				padding-bottom: 4em;
+
+				&:before {
+					content: "";
+					width: 80%;
+					margin: 0 auto;
+					border-top: 2px solid $white;
+					display: block;
+					margin-bottom: 3em;
+				}
+
+				&:after {
+					content: "";
+					width: 80%;
+					margin: 0 auto;
+					border-bottom: 2px solid $white;
+					display: block;
+					margin-top: 3em;
+				}
 			}
 		}
 	}
@@ -503,29 +512,6 @@ section {
 		}
 	}
 
-	&.impact-charts {
-		ul {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: center;
-
-			li {
-				flex-basis: calc((100% / 5) - 1em);
-				padding: 1em;
-
-				img {
-					width: 100%;
-					height: auto;
-				}
-
-				.impact-description {
-					margin-top: 1em;
-				}
-			}
-		}
-	}
-
 	&.contact-section {
 
 		.contact-section__container {
@@ -534,6 +520,11 @@ section {
 			padding: 1em;
 			display: flex;
 			justify-content: center;
+
+			label {
+				color: $white;
+				font-weight: 600;
+			}
 		}
 
 		.contact-section__form_header {
@@ -545,12 +536,6 @@ section {
 			max-width: 650px;
 		}
 
-		.accent-btn {
-			width: 200px;
-			margin: 0 auto;
-			display: block;
-		}
-
 		.wpcf7-form-control {
 			&-wrap {
 				width: 100%;
@@ -560,6 +545,11 @@ section {
 				select {
 					max-width: 100%;
 				}
+			}
+			&.accent-btn__yellow {
+				width: 200px;
+				margin: 0 auto;
+				display: block;
 			}
 		}
 	}
@@ -841,6 +831,188 @@ section {
 		margin: 0;
 	}
 
+.impact-charts {
+	position: relative;
+	display: block;
+
+	.content {
+		color: $primary-dk;
+		font-weight: 600;
+	}
+
+	>ul {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		list-style-type: none;
+
+		&.horizontal {
+			flex-direction: row;
+
+			li {
+				margin: 0 .5em;
+				padding: 0 1em;
+				@include quantity-query(1, equal) {}
+
+				@include quantity-query(2, equal) {}
+
+				@include quantity-query(3, equal) {}
+
+				@include quantity-query(4, equal) {}
+
+				@include quantity-query(5, equal) {}
+
+				@include quantity-query(6, equal) {}
+
+				@include quantity-query(7, equal) {}
+			}
+		}
+
+		&.vertical {
+			flex-direction: column;
+			align-items: center;
+
+			&.two-up {
+				flex-direction: row;
+				flex-wrap: wrap;
+				li {
+					width: 50%;
+				}
+			}
+
+			&.chart-left {
+				display: flex;
+				flex-direction: row;
+			}
+
+			&.chart-right {
+				display: flex;
+				flex-direction: row-reverse;
+			}
+
+			&.chart-center {
+				display: flex;
+				flex-direction: column;
+
+				.chart, .content {
+					width: 80%;
+				}
+			}
+
+			&.three-up {
+				flex-direction: row;
+				flex-wrap: wrap;
+				li {
+					width: calc(100% / 3);
+				}
+			}
+
+			li {
+				display: flex;
+				flex-direction: row;
+				max-width: 720px;
+				align-items: center;
+				margin-bottom: 2em;
+
+				.chart {
+					width: 50%;
+				}
+
+				.content {
+					width: 50%;
+					font-family: $display;
+					font-size: 1.3em;
+					font-weight: 500;
+				}
+
+			}
+
+		}
+
+	}
+
+	.chart {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1em;
+
+		canvas {
+			width: 100% !important;
+			height: 100% !important;
+			position: relative;
+		}
+
+		.percentage {
+			position: absolute;
+			font-family: $display;
+			font-size: 1.8em;
+			font-weight: 600;
+			color: $secondary;
+		}
+	}
+}
+
+.content-columns {
+	>ul {
+		display: flex;
+		flex-direction: row;
+		list-style-type: none;
+
+		>li {
+			margin: 0 .5em;
+			padding: 0 1em;
+			@include quantity-query(1, equal) {}
+
+			@include quantity-query(2, equal) {}
+
+			@include quantity-query(3, equal) {}
+
+			@include quantity-query(4, equal) {}
+
+			@include quantity-query(5, equal) {}
+
+			@include quantity-query(6, equal) {}
+
+			@include quantity-query(7, equal) {}
+
+			.column_header {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				min-height: 50px;
+				margin-top: 0;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			ul {
+				margin-left: 0em;
+				margin-top: 0;
+				padding-top: 0;
+
+				li {
+					list-style-type: none;
+					margin-bottom: 1em;
+
+					&::before {
+					  content: "\f138";
+						font-size: .8em;
+						margin-right: .5em;
+						color: $chalky-blue;
+						font-family: "Font Awesome 5 Pro";
+					  font-weight: 900;
+					  text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
 
 
 /******************************************************************

@@ -292,7 +292,7 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function starter_fonts() {
-  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Roboto:400,900|Open+Sans:400,600,800&display=swap');
+  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Roboto:400,500,900|Open+Sans:400,600,800&display=swap');
 }
 
 add_action('wp_enqueue_scripts', 'starter_fonts');
@@ -321,7 +321,31 @@ function scrollmagic_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'scrollmagic_scripts' );
 
+function kindleadership_buttons( $buttons ) {
+    array_unshift( $buttons, 'fontselect' );
+    array_unshift( $buttons, 'fontsizeselect' );
+    return $buttons;
+  }
 
+add_filter( 'mce_buttons_2', 'kindleadership_buttons' );
+
+function kindleadership_font_size( $initArray ){
+    $initArray['fontsize_formats'] = ".8rem .9rem 1rem 1.1rem 1.2rem 1.3rem 1.4rem 1.5rem 1.6rem 1.7rem 1.8rem 1.9rem 2rem";
+    return $initArray;
+  }
+add_filter( 'tiny_mce_before_init', 'kindleadership_font_size' );
+
+add_filter( 'tiny_mce_before_init', 'fb_mce_before_init' );
+
+function fb_mce_before_init( $settings ) {
+
+    $font_formats = 'Body=Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;'
+                  . 'Display=Roboto, Arial, sans-serif';
+    $settings[ 'font_formats' ] = $font_formats;
+
+    return $settings;
+
+}
 
 /**
  * Register the required plugins for this theme.
@@ -362,14 +386,14 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> true,
 	));
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Site-Wide',
-		'menu_title'	=> 'Site-Wide',
+		'page_title' 	=> 'Site Wide',
+		'menu_title'	=> 'Site Wide',
 		'parent_slug'	=> 'theme-general-settings',
 	));
 
   acf_add_options_sub_page(array(
-		'page_title' 	=> 'Front-Page',
-		'menu_title'	=> 'Front-Page',
+		'page_title' 	=> 'Front Page',
+		'menu_title'	=> 'Front Page',
 		'parent_slug'	=> 'theme-general-settings',
 	));
 
