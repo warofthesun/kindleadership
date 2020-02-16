@@ -2137,6 +2137,8 @@ section.contact-section .wpcf7-form-control.accent-btn__yellow {
         -ms-flex-pack: justify;
             justify-content: space-between;
     list-style-type: none; }
+    .impact-charts > ul a {
+      text-decoration: none; }
     .impact-charts > ul.horizontal {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;

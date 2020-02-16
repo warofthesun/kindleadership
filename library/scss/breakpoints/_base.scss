@@ -846,6 +846,10 @@ section {
 		justify-content: space-between;
 		list-style-type: none;
 
+		a {
+			text-decoration: none;
+		}
+
 		&.horizontal {
 			flex-direction: row;
 
