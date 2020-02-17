@@ -5,6 +5,7 @@
 			<main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 				<?php if (have_rows('front_page_content', 'option') ) : ?>
 					<?php while (have_rows('front_page_content', 'option') ) : the_row(); ?>
+						<!-- Full Width Content -->
 						<?php if ( get_row_layout() == 'full_width_content_area') : ?>
 							<section>
 							<?php if (get_sub_field('section_header')) : ?>
@@ -15,7 +16,9 @@
 									<?php the_sub_field('content'); ?>
 								</div>
 							</div>
-							</section>
+						</section>
+						<!-- end Full Width Content -->
+						<!-- Charts -->
 							<?php elseif ( get_row_layout() == 'charts') : ?>
 							<?php $chart_settings = get_sub_field('chart_settings'); ?>
 							<section class="impact-charts wrap">
@@ -47,28 +50,42 @@
 								</ul>
 								<?php endif; ?>
 							</section>
+							<!-- end Charts -->
+							<!-- Columns -->
 						<?php elseif ( get_row_layout() == 'columns') : ?>
 						<section class="content-columns wrap">
 							<?php if (get_sub_field('section_header')) : ?>
 								<h2 class="section-header"><?php the_sub_field('section_header'); ?></h2>
 							<?php endif; ?>
 							<?php if(have_rows('column', 'option') ) : ?>
-								<ul class="boop">
+								<ul>
 								<?php while(have_rows('column', 'option') ) : the_row(); ?>
 								<li>
 									<?php $image = get_sub_field('column_image', 'option');  $size = 'gallery_image'; ?>
 									<?php echo wp_get_attachment_image( $image, $size ); ?>
-									<h3 class="column_header"><?php the_sub_field('column_header'); ?></h3>
+
+									<?php if(get_sub_field('process_step') ) : ?>
+										<div class="process_step" <?php if(get_sub_field('process_color') ) : ?>style="border-color:<?php the_sub_field('process_color');?>"<?php endif; ?>>
+											<div class="border">
+												<span class="step">step</span>
+												<span class="number">
+													0<?php the_sub_field('process_step'); ?>
+												</span>
+											</div>
+										</div>
+									<?php endif; ?>
+									<h3 class="column_header" <?php if(get_sub_field('process_color') ) : ?>style="color:<?php the_sub_field('process_color');?>"<?php endif; ?>><?php the_sub_field('column_header'); ?></h3>
 									<div class="content"><?php the_sub_field('content'); ?></div>
 								</li>
 								<?php endwhile; ?>
 							</ul>
 							<?php endif; ?>
 						</section>
+						<!-- end Columns -->
 						<?php endif; ?>
 					<?php endwhile; ?>
 				<?php endif; ?>
-
+				<!-- Contact -->
 				<?php if (have_posts()) : the_post(); ?>
 				<section class="contact-section">
 					<h2><?php the_field('contact_section_header', 'option'); ?></h2>
@@ -83,6 +100,7 @@
 					</div>
 				</section>
 				<?php endif; ?>
+				<!-- end Contact -->
 			</main>
 	</div>
 </div>

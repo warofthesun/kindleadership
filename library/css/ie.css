@@ -110,6 +110,31 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.impact-charts > ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .impact-charts > ul.horizontal {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .impact-charts > ul.horizontal li {
+      margin: 0 .5em;
+      padding: 0 1em;
+      width: 50%; }
+
+.content-columns > ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .content-columns > ul > li {
+    width: 50%; }
+
 /* entry content */
 .entry-content {
   /* at this larger size, we can start to align images */ }
@@ -137,13 +162,68 @@ do they need tweaking?
 */
 /* end .footer-links */
 /*********************
-GENERAL STYLES
-*********************/
-/*********************
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
   width: 760px; }
+
+.impact-charts > ul {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+  .impact-charts > ul.horizontal {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .impact-charts > ul.horizontal li {
+      margin: 0 .5em;
+      padding: 0 1em; }
+      .impact-charts > ul.horizontal li:nth-last-child(1):first-child,
+      .impact-charts > ul.horizontal li:nth-last-child(1):first-child ~ * {
+        width: 100%; }
+      .impact-charts > ul.horizontal li:nth-last-child(2):first-child,
+      .impact-charts > ul.horizontal li:nth-last-child(2):first-child ~ * {
+        width: 50%; }
+      .impact-charts > ul.horizontal li:nth-last-child(3):first-child,
+      .impact-charts > ul.horizontal li:nth-last-child(3):first-child ~ * {
+        width: 33.33333%; }
+      .impact-charts > ul.horizontal li:nth-last-child(4):first-child,
+      .impact-charts > ul.horizontal li:nth-last-child(4):first-child ~ * {
+        width: 25%; }
+      .impact-charts > ul.horizontal li:nth-last-child(5):first-child,
+      .impact-charts > ul.horizontal li:nth-last-child(5):first-child ~ * {
+        width: 20%; }
+      .impact-charts > ul.horizontal li:nth-last-child(6):first-child,
+      .impact-charts > ul.horizontal li:nth-last-child(6):first-child ~ * {
+        width: 16.66667%; }
+      .impact-charts > ul.horizontal li:nth-last-child(7):first-child,
+      .impact-charts > ul.horizontal li:nth-last-child(7):first-child ~ * {
+        width: 14.28571%; }
+
+.content-columns > ul {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+  .content-columns > ul > li:nth-last-child(1):first-child,
+  .content-columns > ul > li:nth-last-child(1):first-child ~ * {
+    width: 100%; }
+  .content-columns > ul > li:nth-last-child(2):first-child,
+  .content-columns > ul > li:nth-last-child(2):first-child ~ * {
+    width: 50%; }
+  .content-columns > ul > li:nth-last-child(3):first-child,
+  .content-columns > ul > li:nth-last-child(3):first-child ~ * {
+    width: 33.33333%; }
+  .content-columns > ul > li:nth-last-child(4):first-child,
+  .content-columns > ul > li:nth-last-child(4):first-child ~ * {
+    width: 25%; }
+  .content-columns > ul > li:nth-last-child(5):first-child,
+  .content-columns > ul > li:nth-last-child(5):first-child ~ * {
+    width: 20%; }
+  .content-columns > ul > li:nth-last-child(6):first-child,
+  .content-columns > ul > li:nth-last-child(6):first-child ~ * {
+    width: 16.66667%; }
+  .content-columns > ul > li:nth-last-child(7):first-child,
+  .content-columns > ul > li:nth-last-child(7):first-child ~ * {
+    width: 14.28571%; }
 
 /*********************
 HEADER STYLES

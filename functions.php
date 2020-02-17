@@ -69,20 +69,6 @@ add_image_size( 'gallery_image', 680, 450, true );
 add_image_size( 'quote_image', 1000, 510, true );
 add_image_size( 'medium_square', 400, 400, true );
 
-/*
-to add more sizes, simply copy a line from above
-and change the dimensions & name. As long as you
-upload a "featured image" as large as the biggest
-set width or height, all the other sizes will be
-auto-cropped.
-
-To call a different size, simply change the text
-inside the thumbnail function.
-
-You can change the names and dimensions to whatever
-you like. Enjoy!
-*/
-
 add_filter( 'image_size_names_choose', 'starter_custom_image_sizes' );
 
 function starter_custom_image_sizes( $sizes ) {
@@ -93,32 +79,9 @@ function starter_custom_image_sizes( $sizes ) {
     ) );
 }
 
-/*
-The function above adds the ability to use the dropdown menu to select
-the new images sizes you have just created from within the media manager
-when you add media to your content blocks. If you add more image sizes,
-duplicate one of the lines in the array and name it according to your
-new image size.
-*/
-
 // TGM Plugin Activation Class
 require_once locate_template('library/tgm-plugin-activation/class-tgm-plugin-activation.php');
 
-/************* THEME CUSTOMIZE *********************/
-
-/*
-  A good tutorial for creating your own Sections, Controls and Settings:
-  http://code.tutsplus.com/series/a-guide-to-the-wordpress-theme-customizer--wp-33722
-
-  Good articles on modifying the default options:
-  http://natko.com/changing-default-wordpress-theme-customization-api-sections/
-  http://code.tutsplus.com/tutorials/digging-into-the-theme-customizer-components--wp-27162
-
-  To do:
-  - Create a js for the postmessage transport method
-  - Create some sanitize functions to sanitize inputs
-  - Create some boilerplate Sections, Controls and Settings
-*/
 
 function starter_theme_customizer($wp_customize) {
   // $wp_customize calls go here.
@@ -403,5 +366,23 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
 	));
 }
+
+// Add friendly block titles to ACF blocks
+
+function my_layout_title($title, $field, $layout, $i) {
+	if($value = get_sub_field('layout_title')) {
+		return $value;
+	} else {
+		foreach($layout['sub_fields'] as $sub) {
+			if($sub['name'] == 'layout_title') {
+				$key = $sub['key'];
+				if(array_key_exists($i, $field['value']) && $value = $field['value'][$i][$key])
+					return $value;
+			}
+		}
+	}
+	return $title;
+}
+add_filter('acf/fields/flexible_content/layout_title', 'my_layout_title', 10, 4);
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

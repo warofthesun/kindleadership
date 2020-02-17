@@ -1562,6 +1562,8 @@ body {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+  body.fixed {
+    overflow: hidden; }
 
 img {
   image-rendering: auto; }
@@ -1710,9 +1712,14 @@ nav {
   position: relative;
   top: 0px;
   width: 100%;
-  background-color: #326bb6;
+  background-color: rgba(50, 107, 182, 0.9);
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 0 2px 15px rgba(0, 0, 0, 0.5);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 0 2px 15px rgba(0, 0, 0, 0.5); }
+  .sticky_nav.fixed {
+    position: fixed !important;
+    padding-top: 3em;
+    height: 100vh;
+    overflow: scroll; }
 
 #mobile-nav {
   text-align: center;
@@ -1723,13 +1730,16 @@ nav {
     position: fixed;
     top: 0px;
     width: 100%;
-    background-color: #326bb6; }
+    background-color: #326bb6;
+    z-index: 10;
+    color: #fff;
+    padding-top: 10px; }
   #mobile-nav.show {
     margin-top: 0em;
     padding: .5em;
-    background-color: white; }
+    background-color: #326bb6; }
     #mobile-nav.show.mobile_sticky {
-      position: relative; }
+      position: fixed; }
     #mobile-nav.show .fa-chevron-down {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
@@ -2136,7 +2146,9 @@ section.contact-section .wpcf7-form-control.accent-btn__yellow {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    list-style-type: none; }
+    list-style-type: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     .impact-charts > ul a {
       text-decoration: none; }
     .impact-charts > ul.horizontal {
@@ -2146,28 +2158,8 @@ section.contact-section .wpcf7-form-control.accent-btn__yellow {
               flex-direction: row; }
       .impact-charts > ul.horizontal li {
         margin: 0 .5em;
-        padding: 0 1em; }
-        .impact-charts > ul.horizontal li:nth-last-child(1):first-child,
-        .impact-charts > ul.horizontal li:nth-last-child(1):first-child ~ * {
-          width: 100%; }
-        .impact-charts > ul.horizontal li:nth-last-child(2):first-child,
-        .impact-charts > ul.horizontal li:nth-last-child(2):first-child ~ * {
-          width: 50%; }
-        .impact-charts > ul.horizontal li:nth-last-child(3):first-child,
-        .impact-charts > ul.horizontal li:nth-last-child(3):first-child ~ * {
-          width: 33.33333%; }
-        .impact-charts > ul.horizontal li:nth-last-child(4):first-child,
-        .impact-charts > ul.horizontal li:nth-last-child(4):first-child ~ * {
-          width: 25%; }
-        .impact-charts > ul.horizontal li:nth-last-child(5):first-child,
-        .impact-charts > ul.horizontal li:nth-last-child(5):first-child ~ * {
-          width: 20%; }
-        .impact-charts > ul.horizontal li:nth-last-child(6):first-child,
-        .impact-charts > ul.horizontal li:nth-last-child(6):first-child ~ * {
-          width: 16.66667%; }
-        .impact-charts > ul.horizontal li:nth-last-child(7):first-child,
-        .impact-charts > ul.horizontal li:nth-last-child(7):first-child ~ * {
-          width: 14.28571%; }
+        padding: 0 1em;
+        width: 100%; }
     .impact-charts > ul.vertical {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -2271,31 +2263,13 @@ section.contact-section .wpcf7-form-control.accent-btn__yellow {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  list-style-type: none; }
+  list-style-type: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .content-columns > ul > li {
     margin: 0 .5em;
-    padding: 0 1em; }
-    .content-columns > ul > li:nth-last-child(1):first-child,
-    .content-columns > ul > li:nth-last-child(1):first-child ~ * {
-      width: 100%; }
-    .content-columns > ul > li:nth-last-child(2):first-child,
-    .content-columns > ul > li:nth-last-child(2):first-child ~ * {
-      width: 50%; }
-    .content-columns > ul > li:nth-last-child(3):first-child,
-    .content-columns > ul > li:nth-last-child(3):first-child ~ * {
-      width: 33.33333%; }
-    .content-columns > ul > li:nth-last-child(4):first-child,
-    .content-columns > ul > li:nth-last-child(4):first-child ~ * {
-      width: 25%; }
-    .content-columns > ul > li:nth-last-child(5):first-child,
-    .content-columns > ul > li:nth-last-child(5):first-child ~ * {
-      width: 20%; }
-    .content-columns > ul > li:nth-last-child(6):first-child,
-    .content-columns > ul > li:nth-last-child(6):first-child ~ * {
-      width: 16.66667%; }
-    .content-columns > ul > li:nth-last-child(7):first-child,
-    .content-columns > ul > li:nth-last-child(7):first-child ~ * {
-      width: 14.28571%; }
+    padding: 0 1em;
+    width: 100%; }
     .content-columns > ul > li .column_header {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2303,11 +2277,42 @@ section.contact-section .wpcf7-form-control.accent-btn__yellow {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      min-height: 50px;
+      margin-top: 0;
+      line-height: 1; }
+    .content-columns > ul > li .process_step {
+      border: 20px solid #75a0d9;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      min-height: 50px;
-      margin-top: 0; }
+      border-radius: 100px;
+      height: 200px;
+      width: 200px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1; }
+      .content-columns > ul > li .process_step .border {
+        padding: 2em;
+        border-radius: 5em;
+        background: #fff;
+        -webkit-box-shadow: 0px 0px 10px 5px rgba(74, 74, 74, 0.1);
+                box-shadow: 0px 0px 10px 5px rgba(74, 74, 74, 0.1); }
+      .content-columns > ul > li .process_step .step {
+        display: block;
+        font-family: "Roboto", "Georgia", Cambria, Times New Roman, Times, sans-serif;
+        font-weight: 500;
+        text-transform: uppercase; }
+      .content-columns > ul > li .process_step .number {
+        font-size: 1.5em; }
     .content-columns > ul > li img {
       width: 100%;
       height: auto; }
@@ -2584,6 +2589,29 @@ NAVIGATION STYLES
   /*********************
 POSTS & CONTENT STYLES
 *********************/
+  .impact-charts > ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .impact-charts > ul.horizontal {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .impact-charts > ul.horizontal li {
+        margin: 0 .5em;
+        padding: 0 1em;
+        width: 50%; }
+  .content-columns > ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .content-columns > ul > li {
+      width: 50%; }
   /* entry content */
   .entry-content {
     /* at this larger size, we can start to align images */ }
@@ -2615,13 +2643,66 @@ TABLET & SMALLER LAPTOPS
 *********************/
 @media only screen and (min-width: 64em) {
   /*********************
-GENERAL STYLES
-*********************/
-  /*********************
 LAYOUT & GRID STYLES
 *********************/
   .wrap {
     width: 760px; }
+  .impact-charts > ul {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+    .impact-charts > ul.horizontal {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      .impact-charts > ul.horizontal li {
+        margin: 0 .5em;
+        padding: 0 1em; }
+        .impact-charts > ul.horizontal li:nth-last-child(1):first-child,
+        .impact-charts > ul.horizontal li:nth-last-child(1):first-child ~ * {
+          width: 100%; }
+        .impact-charts > ul.horizontal li:nth-last-child(2):first-child,
+        .impact-charts > ul.horizontal li:nth-last-child(2):first-child ~ * {
+          width: 50%; }
+        .impact-charts > ul.horizontal li:nth-last-child(3):first-child,
+        .impact-charts > ul.horizontal li:nth-last-child(3):first-child ~ * {
+          width: 33.33333%; }
+        .impact-charts > ul.horizontal li:nth-last-child(4):first-child,
+        .impact-charts > ul.horizontal li:nth-last-child(4):first-child ~ * {
+          width: 25%; }
+        .impact-charts > ul.horizontal li:nth-last-child(5):first-child,
+        .impact-charts > ul.horizontal li:nth-last-child(5):first-child ~ * {
+          width: 20%; }
+        .impact-charts > ul.horizontal li:nth-last-child(6):first-child,
+        .impact-charts > ul.horizontal li:nth-last-child(6):first-child ~ * {
+          width: 16.66667%; }
+        .impact-charts > ul.horizontal li:nth-last-child(7):first-child,
+        .impact-charts > ul.horizontal li:nth-last-child(7):first-child ~ * {
+          width: 14.28571%; }
+  .content-columns > ul {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+    .content-columns > ul > li:nth-last-child(1):first-child,
+    .content-columns > ul > li:nth-last-child(1):first-child ~ * {
+      width: 100%; }
+    .content-columns > ul > li:nth-last-child(2):first-child,
+    .content-columns > ul > li:nth-last-child(2):first-child ~ * {
+      width: 50%; }
+    .content-columns > ul > li:nth-last-child(3):first-child,
+    .content-columns > ul > li:nth-last-child(3):first-child ~ * {
+      width: 33.33333%; }
+    .content-columns > ul > li:nth-last-child(4):first-child,
+    .content-columns > ul > li:nth-last-child(4):first-child ~ * {
+      width: 25%; }
+    .content-columns > ul > li:nth-last-child(5):first-child,
+    .content-columns > ul > li:nth-last-child(5):first-child ~ * {
+      width: 20%; }
+    .content-columns > ul > li:nth-last-child(6):first-child,
+    .content-columns > ul > li:nth-last-child(6):first-child ~ * {
+      width: 16.66667%; }
+    .content-columns > ul > li:nth-last-child(7):first-child,
+    .content-columns > ul > li:nth-last-child(7):first-child ~ * {
+      width: 14.28571%; }
   /*********************
 HEADER STYLES
 *********************/

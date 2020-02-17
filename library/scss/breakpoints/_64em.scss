@@ -1,6 +1,5 @@
-/*********************
-GENERAL STYLES
-*********************/
+@import 'mixins/dynamic_list-item_width';
+// General Style
 
 body {}
 
@@ -12,6 +11,55 @@ LAYOUT & GRID STYLES
 	width: 760px;
 }
 
+.impact-charts {
+
+	>ul {
+		flex-wrap: nowrap;
+		&.horizontal {
+			flex-direction: row;
+
+			li {
+				margin: 0 .5em;
+				padding: 0 1em;
+				@include quantity-query(1, equal) {}
+
+				@include quantity-query(2, equal) {}
+
+				@include quantity-query(3, equal) {}
+
+				@include quantity-query(4, equal) {}
+
+				@include quantity-query(5, equal) {}
+
+				@include quantity-query(6, equal) {}
+
+				@include quantity-query(7, equal) {}
+			}
+		}
+	}
+}
+
+.content-columns {
+	>ul {
+		flex-wrap: nowrap;
+
+		>li {
+			@include quantity-query(1, equal) {}
+
+			@include quantity-query(2, equal) {}
+
+			@include quantity-query(3, equal) {}
+
+			@include quantity-query(4, equal) {}
+
+			@include quantity-query(5, equal) {}
+
+			@include quantity-query(6, equal) {}
+
+			@include quantity-query(7, equal) {}
+		}
+	}
+}
 /*********************
 HEADER STYLES
 *********************/

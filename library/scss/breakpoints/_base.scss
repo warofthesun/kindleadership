@@ -9,6 +9,10 @@ body {
 	background-color: $white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
+
+	&.fixed {
+		overflow: hidden;
+	}
 }
 
 img {
@@ -228,8 +232,15 @@ nav {
 	position: relative;
 	top: 0px;
 	width: 100%;
-	background-color: $accent;
+	background-color: rgba($accent, .9);
 	box-shadow: 0 2px 5px rgba($black, .3), 0 2px 15px rgba($black, .5);
+
+	&.fixed {
+		position: fixed !important;
+		padding-top: 3em;
+		height: 100vh;
+		overflow: scroll;
+	}
 }
 
 #mobile-nav {
@@ -242,15 +253,18 @@ nav {
 		top: 0px;
 		width: 100%;
 		background-color: $accent;
+		z-index: 10;
+		color: $white;
+		padding-top: 10px;
 	}
 
 	&.show {
 		margin-top: 0em;
 		padding: .5em;
-		background-color: white;
+		background-color: $accent;
 
 		&.mobile_sticky {
-			position: relative;
+			position: fixed;
 		}
 
 		.fa-chevron-down {
@@ -845,6 +859,7 @@ section {
 		position: relative;
 		justify-content: space-between;
 		list-style-type: none;
+		flex-wrap: wrap;
 
 		a {
 			text-decoration: none;
@@ -856,19 +871,7 @@ section {
 			li {
 				margin: 0 .5em;
 				padding: 0 1em;
-				@include quantity-query(1, equal) {}
-
-				@include quantity-query(2, equal) {}
-
-				@include quantity-query(3, equal) {}
-
-				@include quantity-query(4, equal) {}
-
-				@include quantity-query(5, equal) {}
-
-				@include quantity-query(6, equal) {}
-
-				@include quantity-query(7, equal) {}
+				width: 100%;
 			}
 		}
 
@@ -963,30 +966,53 @@ section {
 		display: flex;
 		flex-direction: row;
 		list-style-type: none;
+		flex-wrap: wrap;
 
 		>li {
 			margin: 0 .5em;
 			padding: 0 1em;
-			@include quantity-query(1, equal) {}
-
-			@include quantity-query(2, equal) {}
-
-			@include quantity-query(3, equal) {}
-
-			@include quantity-query(4, equal) {}
-
-			@include quantity-query(5, equal) {}
-
-			@include quantity-query(6, equal) {}
-
-			@include quantity-query(7, equal) {}
+			width: 100%;
 
 			.column_header {
 				display: flex;
 				justify-content: flex-start;
-				align-items: center;
+				align-items: flex-end;
 				min-height: 50px;
 				margin-top: 0;
+				line-height: 1;
+			}
+
+			.process {
+				&_step {
+					border: 20px solid $chalky-blue;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 100px;
+					height: 200px;
+					width: 200px;
+					margin: 0 auto;
+					text-align: center;
+					line-height: 1;
+
+					.border {
+						padding: 2em;
+						border-radius: 5em;
+						background: $white;
+						box-shadow: 0px 0px 10px 5px rgba($primary-dk, 0.1);
+					}
+
+					.step {
+						display: block;
+						font-family: $display;
+						font-weight: 500;
+						text-transform: uppercase;
+					}
+
+					.number {
+						font-size: 1.5em;
+					}
+				}
 			}
 
 			img {
