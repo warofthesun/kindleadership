@@ -7,7 +7,7 @@
 					<?php while (have_rows('front_page_content', 'option') ) : the_row(); ?>
 						<!-- Full Width Content -->
 						<?php if ( get_row_layout() == 'full_width_content_area') : ?>
-							<section>
+							<section id="<?php $page_link = sanitize_title_for_query( get_sub_field('layout_title') ); echo esc_attr( $page_link ); ?>">
 							<?php if (get_sub_field('section_header')) : ?>
 							<h2 class="section-header"><?php the_sub_field('section_header'); ?></h2>
 							<?php endif; ?>
@@ -21,7 +21,7 @@
 						<!-- Charts -->
 							<?php elseif ( get_row_layout() == 'charts') : ?>
 							<?php $chart_settings = get_sub_field('chart_settings'); ?>
-							<section class="impact-charts wrap">
+							<section class="impact-charts wrap" id="<?php $page_link = sanitize_title_for_query( get_sub_field('layout_title') ); echo esc_attr( $page_link ); ?>">
 								<?php if (get_sub_field('section_header')) : ?>
 									<h2 class="section-header"><?php the_sub_field('section_header'); ?></h2>
 								<?php endif; ?>
@@ -53,7 +53,7 @@
 							<!-- end Charts -->
 							<!-- Columns -->
 						<?php elseif ( get_row_layout() == 'columns') : ?>
-						<section class="content-columns wrap">
+						<section class="content-columns wrap" id="<?php $page_link = sanitize_title_for_query( get_sub_field('layout_title') ); echo esc_attr( $page_link ); ?>">
 							<?php if (get_sub_field('section_header')) : ?>
 								<h2 class="section-header"><?php the_sub_field('section_header'); ?></h2>
 							<?php endif; ?>
@@ -87,7 +87,7 @@
 				<?php endif; ?>
 				<!-- Contact -->
 				<?php if (have_posts()) : the_post(); ?>
-				<section class="contact-section">
+				<section class="contact-section" id="<?php $page_link = sanitize_title_for_query( get_sub_field('layout_title') ); echo esc_attr( $page_link ); ?>">
 					<h2><?php the_field('contact_section_header', 'option'); ?></h2>
 					<div class="contact-section__container" style="background-image: url(<?php the_field('contact_form_background', 'option'); ?>);">
 						<div class="contact-section__form">
