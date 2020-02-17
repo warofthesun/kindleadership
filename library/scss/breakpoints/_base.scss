@@ -1,6 +1,13 @@
 // GENERAL STYLES
 @import 'mixins/dynamic_list-item_width';
 
+:target:before {
+content:"";
+display:block;
+height:60px; /* fixed header height*/
+margin:-60px 0 0; /* negative fixed header height */
+}
+
 body {
 	font-family: $body;
 	font-size: 100%;

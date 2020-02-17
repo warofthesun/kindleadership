@@ -87,7 +87,7 @@
 				<?php endif; ?>
 				<!-- Contact -->
 				<?php if (have_posts()) : the_post(); ?>
-				<section class="contact-section" id="<?php $page_link = sanitize_title_for_query( get_sub_field('layout_title') ); echo esc_attr( $page_link ); ?>">
+				<section class="contact-section" id="contact-us">
 					<h2><?php the_field('contact_section_header', 'option'); ?></h2>
 					<div class="contact-section__container" style="background-image: url(<?php the_field('contact_form_background', 'option'); ?>);">
 						<div class="contact-section__form">
