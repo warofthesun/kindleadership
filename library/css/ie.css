@@ -228,6 +228,9 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
+#logo {
+  font-size: 6em; }
+
 /*********************
 NAVIGATION STYLES
 *********************/

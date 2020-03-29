@@ -1562,6 +1562,9 @@ BASE (MOBILE) SIZE
   margin: -60px 0 0;
   /* negative fixed header height */ }
 
+section:focus {
+  outline-color: none; }
+
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
@@ -2146,6 +2149,8 @@ section.contact-section .wpcf7-form-control.accent-btn__yellow {
   .impact-charts .content {
     color: #4a4a4a;
     font-weight: 600; }
+    .impact-charts .content p {
+      margin-top: 0; }
   .impact-charts > ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2240,6 +2245,8 @@ section.contact-section .wpcf7-form-control.accent-btn__yellow {
           font-family: "Roboto", "Georgia", Cambria, Times New Roman, Times, sans-serif;
           font-size: 1.3em;
           font-weight: 500; }
+          .impact-charts > ul.vertical li .content p {
+            margin-top: 0; }
   .impact-charts .chart {
     position: relative;
     display: -webkit-box;
@@ -2251,7 +2258,8 @@ section.contact-section .wpcf7-form-control.accent-btn__yellow {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0 1em; }
+    padding: 0;
+    margin: 0 -1em; }
     .impact-charts .chart canvas {
       width: 100% !important;
       height: 100% !important;
@@ -2259,7 +2267,7 @@ section.contact-section .wpcf7-form-control.accent-btn__yellow {
     .impact-charts .chart .percentage {
       position: absolute;
       font-family: "Roboto", "Georgia", Cambria, Times New Roman, Times, sans-serif;
-      font-size: 1.8em;
+      font-size: 1.7em;
       font-weight: 600;
       color: #7DC52C; }
 
@@ -2282,15 +2290,16 @@ section.contact-section .wpcf7-form-control.accent-btn__yellow {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       -webkit-box-align: end;
           -ms-flex-align: end;
               align-items: flex-end;
       min-height: 50px;
       margin-top: 0;
-      line-height: 1; }
+      line-height: 1;
+      text-align: center; }
     .content-columns > ul > li .process_step {
       border: 20px solid #75a0d9;
       display: -webkit-box;
@@ -2714,6 +2723,8 @@ LAYOUT & GRID STYLES
   /*********************
 HEADER STYLES
 *********************/
+  #logo {
+    font-size: 6em; }
   /*********************
 NAVIGATION STYLES
 *********************/
