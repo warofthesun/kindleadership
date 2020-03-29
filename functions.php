@@ -20,7 +20,7 @@ function starter_ahoy() {
   load_theme_textdomain( 'startertheme', get_template_directory() . '/library/translation' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-  require_once( 'library/custom-post-type.php' );
+  //require_once( 'library/custom-post-type.php' );
 
   // launching operation cleanup
   add_action( 'init', 'starter_head_cleanup' );
@@ -360,11 +360,11 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
 	));
 
-  acf_add_options_sub_page(array(
-		'page_title' 	=> 'Quote Graphics',
-		'menu_title'	=> 'Quote Graphics',
-		'parent_slug'	=> 'theme-general-settings',
-	));
+  //acf_add_options_sub_page(array(
+	//	'page_title' 	=> 'Quote Graphics',
+	//	'menu_title'	=> 'Quote Graphics',
+	//	'parent_slug'	=> 'theme-general-settings',
+	//));
 }
 
 // Add friendly block titles to ACF blocks

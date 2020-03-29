@@ -142,7 +142,21 @@ function stickyNav() {
 */
 jQuery(document).ready(function($) {
 
+	$('ul.top-nav li.menu-item a[href*="#"]').click(function(){
+		$(".nav").removeClass("show");
+		$("body").removeClass("fixed");
+		$("#mobile-nav").removeClass("show");
+		$(".sticky_nav").removeClass("fixed");
+		$("#navbar").removeClass("fixed");
+	});
+
 	$("#mobile-nav").click(function(){
+        $(".nav").toggleClass("show");
+				$("#mobile-nav").toggleClass("show");
+				$("#navbar").toggleClass("fixed");
+			});
+
+	$("#mobile-nav.mobile_sticky").click(function(){
         $(".nav").toggleClass("show");
 				$("#mobile-nav").toggleClass("show");
 				$(".sticky_nav").toggleClass("fixed");

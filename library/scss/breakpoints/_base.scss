@@ -260,6 +260,14 @@ nav {
 	text-align: center;
 	transition: all .5s;
 	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.fa-chevron-down {
+		margin-left: .5em;
+		margin-top: .3em;
+	}
 
 	&.mobile_sticky {
 		position: fixed;
@@ -275,6 +283,11 @@ nav {
 		margin-top: 0em;
 		padding: .5em;
 		background-color: $accent;
+		color: $white;
+
+		a {
+			color: $white;
+		}
 
 		&.mobile_sticky {
 			position: fixed;
